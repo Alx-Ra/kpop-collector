@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stray Kids Collector</title>
+</head>
+<body>
+    <h1>Ma Collection Stray Kids 🌟</h1>
+    <p>Bienvenue dans ma base de données !</p>
+
+    <ul>
+        {% for card in all_cards %}
+            <li><strong>{{ card.member }}</strong> - {{ card.album }}</li>
+        {% empty %}
+            <li>Aucune carte pour l'instant. Connecte-toi sur <a href="/admin">l'admin</a> pour en ajouter !</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

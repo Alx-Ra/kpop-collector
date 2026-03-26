@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from cards.views import home  # On importe la fonction qu'on a écrite hier
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'), # Le chemin vide '' correspond à la page d'accueil
 ]
